@@ -1,0 +1,91 @@
+<!-- <h1>Admin works</h1> -->
+<section id="cover">
+    <div class="container">
+    <div class="row">
+    <div class="container center_div">
+    <div class="jumbtron">
+                    <h2><b>Add Movie</b></h2>
+                    <br>
+                    
+                    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                        <!--1-->
+                <div class="col-sm-6 form-group">
+                              <label>Movie Title</label>
+                              <input type="text" placeholder="Enter Movie Title here.." formControlName="movieTitle" class="form-control" />
+                
+                                <div *ngIf="f.movieTitle.hasError('required')">
+                                  <span style="color: red;">Please Enter First Name.</span>
+                                </div>
+                                <div *ngIf="f.movieTitle.hasError('minlength')">
+                                  <span style="color: red;">First Name requied atleast 3 characters.</span>
+                                </div>
+                                <div *ngIf="f.movieTitle.hasError('maxlength')">
+                                  <span style="color: red;">First Name requied only 30 characters.</span>
+                                </div>
+                                <div *ngIf="f.movieTitle.hasError('pattern')">
+                                  <span style="color: red;">Only characters are allowed.</span>
+                                </div>
+                                <br>
+                           <!--2-->
+                           <label>Movie Release</label>
+                           <input type="date" formControlName="movieRelease" class="form-control" />
+                           <br>
+    
+                               <!--3-->
+                           
+                                <label>Movie Duration</label>
+                                <input type="number" placeholder="Enter Duration of movie.." formControlName="movieDuration" class="form-control" />
+                  
+                                  <div *ngIf="f.movieDuration.hasError('required')">
+                                    <span style="color: red;">Please Enter Duration.</span>
+                                  </div>
+                                  <div *ngIf="f.movieDuration.hasError('minlength')">
+                                    <span style="color: red;">atleast 120 minutes</span>
+                                  </div>
+                                  <div *ngIf="f.movieDuration.hasError('maxlength')">
+                                    <span style="color: red;">only 400 minutes</span>
+                                  </div>
+                                  <div *ngIf="f.movieDuration.hasError('pattern')">
+                                    <span style="color: red;">Only numbers are allowed.</span>
+                                  </div>
+                                  <br>
+                                   <!--4-->
+                                   <label>Movie Summary</label>
+                                   <input type="text" placeholder="Enter Summary of movie.." formControlName="movieSummary" class="form-control" />
+                     
+                                     <div *ngIf="f.movieSummary.hasError('required')">
+                                       <span style="color: red;">Please Enter Summary.</span>
+                                     </div>
+                                    
+                                     <div *ngIf="f.movieSummary.hasError('pattern')">
+                                       <span style="color: red;">Only  characters and numbers are allowed.</span>
+                                     </div>
+                                     <br>
+                                      <!--5-->
+                                      <label>Movie Rating</label>
+                                      <input type="number" placeholder="Enter Rating of movie.." formControlName="movieRating" class="form-control" />
+                        
+                                        <div *ngIf="f.movieRating.hasError('required')">
+                                          <span style="color: red;">Please Enter Rating.</span>
+                                        </div>
+                                       
+                                        <div *ngIf="f.movieRating.hasError('pattern')">
+                                          <span style="color: red;">Only decimals.</span>
+                                        </div>
+                                        <br>
+    
+                                        <input type="file" class="form-control" >
+                                        <br>
+                                        <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    
+                                        
+               </div>       
+                </form>
+                      
+            
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
