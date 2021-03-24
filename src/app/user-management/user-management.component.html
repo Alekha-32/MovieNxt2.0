@@ -1,0 +1,37 @@
+<!-- <div class="container" *ngFor="let dataItem of UsersList" >
+        <table border=1 class="table" >
+          <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>UserName</th>
+            <th>Phone</th>
+          </tr>
+            <tr> 
+                <td>{{ dataItem.First_Name }}</td>
+                <td>{{ dataItem.Last_Name }}</td>
+                <td>{{ dataItem.UserName }}</td>
+                <td>{{ dataItem.Password }}</td>
+                <button id="remove">DELETE ROW</button>
+            </tr>
+        </table> 
+    </div> -->
+
+    <table class="table" >
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">UserName</th>
+                <th scope="col"></th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dataItem of UsersList">
+                <td>{{ dataItem.First_Name }}</td>
+                <td>{{ dataItem.Last_Name }}</td>
+                <td>{{ dataItem.UserName }}</td>
+               <td><button type="button" class="btn btn-dark"  (click)="deleteUsers(dataItem.UserID)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>

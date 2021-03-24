@@ -1,0 +1,50 @@
+<div class="container">
+        <form [formGroup]="MovieForm">
+          <div class="form-group">
+            <label for="movieName">Movie Name: </label>
+              <div class="controls">
+     
+      <input type="text" id="MovieName" placeholder="Movie Title" class="form-control" formControlName="Movie_Title">
+            </div>
+          </div>
+          <div class="form-group">
+                <label for="movieRelease">Movie Release: </label>
+                  <div class="controls">
+                    <input type="date" id="MovieRelease" placeholder="Movie Release" class="form-control" formControlName="Movie_Release">
+                </div>
+              </div>
+              <div class="form-group">
+                    <label for="movieDuration">Movie Duration: </label>
+                      <div class="controls">
+                        <input type="text" id="MovieDuration" placeholder="Movie Duration" class="form-control" formControlName="Movie_Duration">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                        <label for="movieSummary">Movie Summary: </label>
+                          <div class="controls">
+                            <input type="text" id="MovieSummary" placeholder="Movie Summary" class="form-control" formControlName="Movie_Summary">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                            <label for="movieRating">Movie Rating: </label>
+                              <div class="controls">
+                                <input type="text" id="movieRating" placeholder="Movie Rating" class="form-control" formControlName="Movie_Rating">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                                <label for="movieUrl">Movie Url: </label>
+                                  <div class="controls">
+                                    <input type="file" id="movieUrl" placeholder="Movie Url" class="form-control" formControlName="Movie_Url">
+                                </div>
+                              </div>
+          
+          <div class="form-group">
+            <button class="btn btn-primary" (click)="addMovie()" type="submit" style="width: 30%">
+                Add Movie
+            </button>
+          </div>
+        </form>
+        </div>
+
+       
+        
